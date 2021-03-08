@@ -1,125 +1,179 @@
 'use strict';
-//not finished yet
-let time = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
 
-let Seattle = { name: 'Seattle' , min :23, max:65, Avg:6.3, result: [], total : 0, //proparites
+let Seattle = { name: 'Seattle' , min :23, max:65, Avg:6.3,
+  time : ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'],
+  result: [], //proparites
 
 
   customers_per_hour: function(){ // methods
-    return Math.floor(Math.random() * (this.max - this.min + 1)) + this.min; }, // Getting a random integer between two values, inclusive
+    let x = Math.floor(Math.random() * (this.max - this.min + 1)) + this.min;
+    return x;}, // Getting a random integer between two values, inclusive
 
 
   cookies:function(){ // using average cookies and the random number of customers to evaluate amounts.
-    return Math.floor(this.Avg*this.this.customers_per_hour());},
+    let Amounts=Math.floor(this.Avg*this.customers_per_hour());
+
+    return Amounts;},
 
   finelresult: function(){
-
+    let total=0;
+    let list = document.getElementById(this.name);
     for (let i = 0; i <14; i++) {
-      this.result.push(this.cookies() );
-      this.Total += this.finelresult[i];
+      this.result.push(this.cookies());
+      total = +this.result[i];
+      let A = document.createElement('li');
+      A.innerHTML = this.time[i] + ' ' + this.result[i];
+      list.appendChild(A);
     }
+    let A= document.createElement('li');
+    A.innerHTML = 'Total=' + total;
+    list.appendChild(A);
+
   },
 
 
 };
+Seattle.finelresult();
+
+
+let Tokyo = { name: 'Tokyo' , min :3, max:24, Avg:1.2, result:[],
+  time : ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'],
 
 
 
-
-let Tokyo = { name: 'Tokyo' , min :3, max:24, Avg:1.2, result:[], total :0,
-
-
-  customers_per_hour: function(){
-    return Math.floor(Math.random() * (this.max - this.min + 1)) + this.min; },
+  customers_per_hour: function(){ // methods
+    let x = Math.floor(Math.random() * (this.max - this.min + 1)) + this.min;
+    return x;}, // Getting a random integer between two values, inclusive
 
 
-  cookies:function(){
-    return Math.floor(this.Avg*this.customers_per_hour());},
+  cookies:function(){ // using average cookies and the random number of customers to evaluate amounts.
+    let Amounts=Math.floor(this.Avg*this.customers_per_hour());
+
+    return Amounts;},
 
   finelresult: function(){
-
-    for (let i = 0; i < 14; i++) {
-      this.result.push(this.cookies() );
-      this.Total += this.finelresult[i];
+    let total=0;
+    let list = document.getElementById(this.name);
+    for (let i = 0; i <14; i++) {
+      this.result.push(this.cookies());
+      total = total+this.result[i];
+      let A = document.createElement('li');
+      A.innerHTML = this.time[i] + ' ' + this.result[i];
+      list.appendChild(A);
     }
+    let A= document.createElement('li');
+    A.innerHTML = 'Total=' + total;
+    list.appendChild(A);
+
   },
-
-
 
 };
 
+Tokyo.finelresult();
+
+let Dubai = { name: 'Dubai' , min :11, max:38, Avg:3.7, result:[],
+  time : ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'],
 
 
-let Dubai = { name: 'Dubai', min :11, max:38, Avg:3.7,result:[], total:0,
-  customers_per_hour: function(){
-    return Math.floor(Math.random() * (this.max - this.min + 1)) + this.min; },
+
+  customers_per_hour: function(){ // methods
+    let x = Math.floor(Math.random() * (this.max - this.min + 1)) + this.min;
+    return x;}, // Getting a random integer between two values, inclusive
 
 
-  cookies:function(){
-    return Math.floor(this.Avg*this.customers_per_hour());},
+  cookies:function(){ // using average cookies and the random number of customers to evaluate amounts.
+    let Amounts=Math.floor(this.Avg*this.customers_per_hour());
 
-
+    return Amounts;},
 
   finelresult: function(){
-
-    for (let i = 0; i < 14; i++) {
-      this.result.push(this.cookies() ) ;
-      this.Total += this.finelresult[i];
+    let total=0;
+    let list= document.getElementById(this.name);
+    for (let i = 0; i <14; i++) {
+      this.result.push(this.cookies());
+      total = total+this.result[i];
+      let A = document.createElement('li');
+      A.innerHTML = this.time[i] + ' ' + this.result[i];
+      list.appendChild(A);
     }
-  },
+    let A= document.createElement('li');
+    A.innerHTML = 'Total=' + total;
+    list.appendChild(A);
 
+  },
 
 };
 
+Dubai.finelresult();
 
 
-let paris = { name:'paris' , min :20, max:38, Avg:2.3,result:[], total:0,
-  customers_per_hour: function(){
-    return Math.floor(Math.random() * (this.max - this.min + 1)) + this.min; },
+
+let Paris = { name: 'Paris' , min :20, max:38, Avg:2.3,
+  time : ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'],
+  result: [], //proparites
 
 
-  cookies:function(){
-    return Math.floor(this.Avg*this.customers_per_hour());},
+  customers_per_hour: function(){ // methods
+    let x = Math.floor(Math.random() * (this.max - this.min + 1)) + this.min;
+    return x;}, // Getting a random integer between two values, inclusive
 
 
+  cookies:function(){ // using average cookies and the random number of customers to evaluate amounts.
+    let Amounts=Math.floor(this.Avg*this.customers_per_hour());
+
+    return Amounts;},
 
   finelresult: function(){
-
-    for (let i = 0; i < 14; i++) {
-      this.result.push(this.cookies() ) ;
-      this.Total += this.cookies[i];
+    let total=0;
+    let list = document.getElementById(this.name);
+    for (let i = 0; i <14; i++) {
+      this.result.push(this.cookies());
+      total = +this.result[i];
+      let A = document.createElement('li');
+      A.innerHTML = this.time[i] + ' ' + this.result[i];
+      list.appendChild(A);
     }
+    let A= document.createElement('li');
+    A.innerHTML = 'Total =' + total;
+    list.appendChild(A);
+
   },
 
 
 };
+Paris.finelresult();
+
+let Lima = { name: 'Lima' , min :2, max:16, Avg:4.6,
+  time : ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'],
+  result: [], //proparites
 
 
+  customers_per_hour: function(){ // methods
+    let x = Math.floor(Math.random() * (this.max - this.min + 1)) + this.min;
+    return x;}, // Getting a random integer between two values, inclusive
 
 
-let Lima = { name: 'Lima' ,min :2,max:16, Avg:4.6,result: [],total:0,
-  customers_per_hour: function(){
-    return Math.floor(Math.random() * (this.max - this.min + 1)) + this.min; },
+  cookies:function(){ // using average cookies and the random number of customers to evaluate amounts.
+    let Amounts=Math.floor(this.Avg*this.customers_per_hour());
 
-
-  cookies:function(){
-    return Math.floor(this.Avg*this.customers_per_hour());},
-
+    return Amounts;},
 
   finelresult: function(){
-
-    for (let i = 0; i < 14; i++) {
-      this.result.push(this.cookies() ) ;
-      this.Total += this.finelresult[i];
-
+    let total=0;
+    let list = document.getElementById(this.name);
+    for (let i = 0; i <14; i++) {
+      this.result.push(this.cookies());
+      total = +this.result[i];
+      let A = document.createElement('li');
+      A.innerHTML = this.time[i] + ' ' + this.result[i];
+      list.appendChild(A);
     }
+    let A= document.createElement('li');
+    A.innerHTML = 'Total=' + total;
+    list.appendChild(A);
+
   },
 
+
 };
-
-
-
-
-
-
-
+Lima.finelresult();
