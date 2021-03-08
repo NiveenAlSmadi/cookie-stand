@@ -176,4 +176,4 @@ let Lima = { name: 'Lima' , min :2, max:16, Avg:4.6,
 
 
 };
-Lima.finelresult();
+Lima.finelresult()
