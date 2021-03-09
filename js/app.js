@@ -44,7 +44,7 @@ let Paris= new Sales('Paris', 20, 38, 2.3);
 let Lima = new Sales('Lima', 2, 16, 4.6);
 let city  = [Seattle,Tokyo, Dubai,Paris, Lima];
 
-//---------------------------//
+//----------------------/
 
 let table = document.getElementById('cookie-stand');
 
