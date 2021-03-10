@@ -1,4 +1,5 @@
 'use strict';
+
 let table = document.getElementById('table1');
 let time = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
 
@@ -7,7 +8,7 @@ let Tokyo = new Sales('Tokyo', 3, 24, 1.2);
 let Dubai = new Sales('Dubai', 11, 38, 3.7);
 let Paris= new Sales('Paris', 20, 38, 2.3);
 let Lima = new Sales('Lima', 2, 16, 4.6);
-let city  = [Seattle,Tokyo, Dubai,Paris, Lima];
+let city = [Seattle,Tokyo, Dubai,Paris, Lima];
 
 
 
@@ -52,7 +53,7 @@ Sales.prototype.totalresult=function(){
 
 Sales.prototype.render = function() {
   this.totalresult();
-  let Head = document.createElement('head');
+  let Head = document.createElement('th');
   table.appendChild(Head);
 
   let row = document.createElement('tr');
@@ -107,4 +108,21 @@ function makeTheFooterRow(){
 
   table.appendChild(footerRow);
 }
+let New = document.getElementById('newStore');
+// form
+function newstore(event){
+  event.preventDefault();
 
+  let New_name= (event.target.name.value);
+  let New_min = (event.target.min.value);
+  let New_max=  (event.target.max.value);
+  let New_avg =  (event.target.avg.value);
+
+  let New_store= new Sales(New_name,New_min,New_max,New_avg);
+  //let New_table = document.getElementById('table1');
+  //New_table.textContent= ' ';
+  New_store.render();
+  //makeTheFooterRow();
+}
+
+New.addEventListener('submit', newstore);
