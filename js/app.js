@@ -120,9 +120,9 @@ function newstore(event){
 
   let New_store= new Sales(New_name,New_min,New_max,New_avg);
   //let New_table = document.getElementById('table1');
-  //New_table.textContent= ' ';
+  // New_table.textContent= ' ';
   New_store.render();
-  //makeTheFooterRow();
+
 }
 
 New.addEventListener('submit', newstore);
