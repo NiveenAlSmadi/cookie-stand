@@ -8,7 +8,7 @@
 - Swing animation on fish from : [http://www.webdesignerdepot.com/2014/05/8-simple-css3-transitions-that-will-wow-your-users/]
 
 - All numbers and locations are hypothetical and do not provide any relevance to reality .
-- The header inspired from : [http://saulfein.github.io/cookie-stand/#top]
+
 
 
 
