@@ -1,6 +1,5 @@
 # cookie-stand
-1. finched lab06
-
+- project in code 201d18
 ## important 
 - in lab07 part 'makeTheFooterRow' ispired by mr.yahya albashar in his code review .
 - in footer section ,I use a demo from : [https://onaircode.com/html-css-footer-design-examples.]
