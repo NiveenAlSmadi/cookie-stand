@@ -10,13 +10,13 @@ let Paris= new Sales('Paris', 20, 38, 2.3);
 let Lima = new Sales('Lima', 2, 16, 4.6);
 let city = [Seattle,Tokyo, Dubai,Paris, Lima];
 
-
-
 function random(min,max) {
   return Math.floor(Math.random() * (max - min + 1 ) + min);
 }
 
-function Sales (Name, min, max, avg) {// Constructor
+
+
+function Sales (Name, min, max, avg) {// /////////////////////////////////////////Constructor
   this.Name = Name;
   this.min= min;
   this.max = max;
@@ -26,7 +26,9 @@ function Sales (Name, min, max, avg) {// Constructor
   this.result= 0;
 
 }
-// prototype for const
+
+
+// ///////////////////////////////////////////////////////prototype for const
 Sales.prototype.cph= function (){
   for (var i = 0; i < time.length; i++) {
 
@@ -48,7 +50,7 @@ Sales.prototype.totalresult=function(){
   for (var i = 0; i <time.length; i++){
     this.result= this.result + this.cookies[i];}
 };
-
+/////////////////////////////////////////render///////////////////////////////////////////
 
 
 Sales.prototype.render = function() {
@@ -72,11 +74,32 @@ Sales.prototype.render = function() {
 
 };
 
+//////////////////////////////////////////////////////// table///////////////////////////////////////////////
 
-for (let i = 0; i < city.length; i++){
-
-  city[i].render();
+function makeHeaderRow() {
+  const tableRow = document.createElement('tr');
+  let tableHeader = document.createElement('th');
+  tableHeader.textContent = 'city';
+  tableRow.appendChild(tableHeader);
+  for (let i = 0; i < time.length; i++) {
+    tableHeader = document.createElement('th');
+    tableHeader.textContent = time[i];
+    tableRow.appendChild(tableHeader);
+  }
+  tableHeader = document.createElement('th');
+  tableHeader.textContent = 'Location Totals';
+  tableRow.appendChild(tableHeader);
+  table.appendChild(tableRow);
 }
+
+
+(function renderTable() {
+  makeHeaderRow();
+  for(let i = 0; i <city.length; i++){
+    city[i].render();
+  }
+
+})();
 
 makeTheFooterRow();
 
@@ -89,7 +112,9 @@ function makeTheFooterRow(){
 
   let totalOfHours = 0;
   let hourlyTotals = 0;
-  //Total Hourly totals
+
+  /////////////////////////////////////////////////////////////Total Hourly totals//////////////////////////
+
   for(var i = 0; i < time.length; i++){
     hourlyTotals = 0;
     for(var j = 0; j < city.length; j++){
@@ -110,7 +135,15 @@ function makeTheFooterRow(){
   table.appendChild(footerRow);
 }
 let New = document.getElementById('newStore');
-// form
+
+
+
+
+// //////////////////////////////////////////////////////////////form//////////////////////////////////////
+
+
+
+
 function newstore(event){
   event.preventDefault();
 
