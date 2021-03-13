@@ -1,18 +1,68 @@
-@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
 
 body{background-color: lightsalmon;
 
 }
 
-h1.h2{
-font-family: 'Akaya Telivigala';
-text-align: center;
+
+#topheader {
+  display: flex;
+  align-items: center;
+  background-color: #3B2215;
+  justify-content: space-around;
+  height: 85px;
+  width: 100%;
+  position: fixed;
+  z-index: 2
+}
+
+#shop-name {
+  font-family: 'Courgette', cursive;
+  margin: auto;
+  font-size: 24px;
+  text-align:justify;
+  color: #FFC48A;
+}
+#bigfish{
+  width: 200px;
+  height: 62.515883100381px;
+  padding-top: 0.25%;
+  padding-right: 1%;
+                                                                                                                                                             
+}
+
+#locationstitle {
+  text-align: center;
+  font-family: 'Courgette', cursive;
+  padding-top: 5%;
+  padding-bottom: 0%;
+  color: #522c06;
+}
+
+ul{
+  font-family: 'Courgette', cursive;
+  font-weight: bold;
+   color: #3B2215 ;
+
+
+}
+
+
+h1,h2{
+  color:#3B2215 ;
+  font-family: 'Courgette', cursive;
+  font-size: 20px;
+  text-align: center;
+}
+fieldset{
+  font-family: 'Courgette', cursive;
+  color: #3B2215
 
 }
 table {
     width: 900px;
-    background-color: rgb(235, 137, 46);
-    border: 2px solid black;
+    background-color:  #3B2215;
+    border: 2px solid rgb(190, 123, 68);
   
   }
   th, td {
@@ -27,6 +77,150 @@ table {
   }
   tr {
     text-align:  center;
-    color: black;
+    color:#FFC48A;
     border: black;
   }
+h4,h5{
+ color:#3B2215 ;
+ font-family: 'Courgette', cursive;
+ font-size: 30px;
+}
+div p {
+  color:#3B2215 ;
+ font-family: 'Courgette', cursive;
+ font-size: 20px;
+}
+#fishies {
+  float: right;
+}
+.line{
+  background-image: linear-gradient(45deg, #3B2215 28.57%,#3B2215 28.57%, #e48416 50%,#FFC48A 50%, #eba613 78.57%, #FFC48A 78.57%, #e0e0e0 100%);
+background-size: 9.90px 9.90px;
+height: 10px;
+width: 120%;
+}
+
+@keyframes swing
+{
+    15%
+    {
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px);
+    }
+    30%
+    {
+        -webkit-transform: translateX(-5px);
+        transform: translateX(-5px);
+    }
+    50%
+    {
+        -webkit-transform: translateX(3px);
+        transform: translateX(3px);
+    }
+    65%
+    {
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+    }
+    80%
+    {
+        -webkit-transform: translateX(2px);
+        transform: translateX(2px);
+    }
+    100%
+    {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+.swing:hover
+{
+        -webkit-animation: swing 1s ease;
+        animation: swing 1s ease;
+        -webkit-animation-iteration-count: 1;
+        animation-iteration-count: 1;
+}
+
+  
+
+* {
+  font-family: Roboto;
+}
+
+section {
+  width: 100%;
+  display: inline-block;
+  height: 60vh;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.footer-distributed {
+  background-color: #3B2215;
+  box-shadow: 0 1px 1px ;
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: normal 16px sans-serif;
+  padding: 45px 50px;
+}
+
+.footer-distributed .footer-left p {
+  color: #FFC48A;
+  font-size: 14px;
+  margin: 0;
+}
+/* Footer links */
+
+.footer-distributed p.footer-links {
+  font-size: 18px;
+  font-weight: bold;
+  color:  #FFC48A;
+  margin: 0 0 10px;
+  padding: 0;
+  transition: ease .25s;
+}
+
+.footer-distributed p.footer-links a {
+  display: inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color: inherit;
+  transition: ease .25s;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "·";
+  font-size: 20px;
+  left: 0;
+  color:  #FFC48A;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+
+
+.footer-distributed .footer-right {
+  float: right;
+  margin-top: 6px;
+  max-width: 180px;
+}
+
+.footer-distributed .footer-right a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background-color: #FFC48A;
+  border-radius: 2px;
+  font-size: 20px;
+  color: #FFC48A;
+  text-align: center;
+  line-height: 35px;
+  margin-left: 3px;
+  transition:all .25s;
+}
+
+
+
